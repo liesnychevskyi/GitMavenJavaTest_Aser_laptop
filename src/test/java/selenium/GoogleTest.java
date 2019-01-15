@@ -16,12 +16,14 @@ public class GoogleTest
     {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        System.out.println("step_1");
     }
 
     @Test
     public void GoogleOpen()
     {
         driver.get(url);
+        System.out.println("step_2");
     }
 
     @AfterTest
@@ -29,5 +31,6 @@ public class GoogleTest
     {
         driver.close();
         driver.quit();
+        System.out.println("step_3");
     }
 }
